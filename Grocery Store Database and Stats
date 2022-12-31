@@ -1,0 +1,26 @@
+--Create a grocery store database 
+
+create table store (id integer primary key, item text, price integer, popular integer);
+
+insert into store values (1, "pants", 14.99, 10);
+insert into store values (2, "shirts", 7.99,11);
+insert into store values (3, "skirts", 5.99,3);
+insert into store values (4, "tank tops", 3.99,6);
+insert into store values (5,"belts", 4.99, 2);
+
+--display sum price 
+select * from store;
+select SUM(price) from store;
+
+--display database by price 
+select *from store
+order by price desc;
+
+--top 3 most popular item 
+select item, price, popular from store order by popular desc 
+limit 3
+
+
+
+
+
