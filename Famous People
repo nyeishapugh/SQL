@@ -1,0 +1,25 @@
+/* Create table about the people and what they do here */
+CREATE TABLE Famous_People (id INTEGER PRIMARY KEY,
+first_name TEXT,
+birth_city TEXT,
+birth_year integer, 
+occupation text);
+
+ INSERT into Famous_People Values (1, "SummerW", "Atl", 1992, "singer");
+    Insert into Famous_people values  (2, "Wanye", "N.Orleans", 1982, "rapper");
+    INSERT into Famous_people values (3, "Beyonce", "Houston", 1983, "singer");
+    INSERT into Famous_People values (4, "SZA", "Missouri", 1993, "singer");
+    
+    /*List a song from each artist*/
+    CREATE TABLE audio_media (id INTEGER PRIMARY KEY, audio_song TEXT);
+    INSERT into audio_media values (1, "Session 32");
+    INSERT into audio_media values (2, "Lollipop");
+    INSERT into audio_media values (3, "Crazy in love");
+    INSERT into audio_media values (4,"Broken Girl");
+    
+    /* list artist and their song*/
+    Select famous_people.first_name, audio_media.audio_song from famous_people
+    join audio_media
+    ON famous_people.id = audio_media.id;
+    
+    
